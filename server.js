@@ -8,6 +8,14 @@ var app = express();
 // Set the port for the app
 var PORT = process.env.PORT || 8080;
 
+// Set up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Require htmlRoutes and apiRoutes from separate files
+require("./app/routing/htmlRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
+
 // Start serve to listen to client requests
 app.listen(PORT, function() {
     // Log on server-side that server has started 
