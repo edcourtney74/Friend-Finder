@@ -7,13 +7,23 @@
     <title>Friend Finder | Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome link -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <!-- Local CSS link -->
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -33,142 +43,164 @@
             <h4>Question 1</h4>
             <div class="form-group">
                 <label for="q1">I am more interested in intellectual pursuits than anything else.</label>
-                <select class="form-control mb-4" id="q1">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q1">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 2</h4>
             <div class="form-group">
                 <label for="q2">Having a family is the most important thing to me.</label>
-                <select class="form-control mb-4" id="q2">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q2">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 3</h4>
             <div class="form-group">
                 <label for="q3">I usually buy the best and most expensive things when I can.</label>
-                <select class="form-control mb-4" id="q3">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q3">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 4</h4>
             <div class="form-group">
                 <label for="q4">My belief in God affects my life</label>
-                <select class="form-control mb-4" id="q4">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q4">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 5</h4>
             <div class="form-group">
                 <label for="q5">I follow a schedule in my daily life.</label>
-                <select class="form-control mb-4" id="q5">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q5">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 6</h4>
             <div class="form-group">
                 <label for="q6">I can't go a day without listening to music.</label>
-                <select class="form-control mb-4" id="q6">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q6">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 7</h4>
             <div class="form-group">
                 <label for="q7">I'd rather spend a Friday night home watching Netflix than out on the town.</label>
-                <select class="form-control mb-4" id="q7">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q7">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 8</h4>
             <div class="form-group">
                 <label for="q8">I tend to follow my heart more than my head.</label>
-                <select class="form-control mb-4" id="q8">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q8">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 9</h4>
             <div class="form-group">
                 <label for="q9">I'm much more extroverted than I am introverted.</label>
-                <select class="form-control mb-4" id="q9">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q9">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
             <h4>Question 10</h4>
             <div class="form-group">
                 <label for="q10">Maintaining a healthy lifestyle is important to me.</label>
-                <select class="form-control mb-4" id="q10">
-                    <option selected disabled>Choose...</option>
-                    <option>1 (Strongly Disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly Agree)</option>
+                <select required class="form-control mb-4" id="q10">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary"><i class="fas fa-user-friends"></i>&nbsp&nbspFind a friend!</button>         
+            <button type="submit" class="btn btn-primary" id="find-friend"><i class="fas fa-user-friends"></i>&nbsp&nbspFind
+                a friend!</button>
         </form>
         <hr>
-        <div><a href="/api/friends">API Friends List</a>&nbsp&nbsp|&nbsp&nbsp<a href="https://github.com/edcourtney74/Friend-Finder" target="_blank"> GitHub Repo</a>
+        <div><a href="/api/friends">API Friends List</a>&nbsp&nbsp|&nbsp&nbsp<a href="https://github.com/edcourtney74/Friend-Finder"
+                target="_blank"> GitHub Repo</a>
         </div>
     </div>
 
-    <!-- Javascript files -->
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <!-- Local -->
-    <script src="friends.js"></script>
 </body>
 
 </html>
+
+<!-- Javascript to grab form input -->
+<script>
+    // When Find a Friend button is clicked...
+    $("#find-friend").on("click", function (event) {
+        event.preventDefault();
+        ("click worked");
+
+        // Grab values submitted in form
+        var newFriend = {
+            name: $("#name").val().trim(),
+            image: $("#image").val().trim(),
+            scores: [$("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim()
+            ]
+        }
+
+        console.log(newFriend);
+
+    });
+
+
+
+</script>
