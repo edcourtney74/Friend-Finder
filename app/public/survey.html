@@ -153,14 +153,14 @@
                 <label for="q10">Maintaining a healthy lifestyle is important to me.</label>
                 <select required class="form-control mb-4" id="q10">
                     <option selected disabled value="">Choose...</option>
-                    <option value="1 (Strongly Disagree">1 (Strongly Disagree)</option>
+                    <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5 (Strongly Agree)">5 (Strongly Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#friend-modal" id="find-friend"><i class="fas fa-user-friends"></i>&nbsp&nbspFind
+            <button type="submit" class="btn btn-primary" id="find-friend"><i class="fas fa-user-friends"></i>&nbsp&nbspFind
                 a friend!</button>
         </form>
         
@@ -175,7 +175,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5 id="name-match"></h5> 
+                        <h5 id="name-match"></h5>
+                        <img id="image-match">                        
+                        <p>Let your friends know about Friend Finder!</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -205,25 +207,30 @@
 
         // Grab values submitted in form
         var newFriend = {
-            name: $("#name").val().trim(),
-            image: $("#image").val().trim(),
-            scores: [$("#q1").val().trim(),
-            $("#q2").val().trim(),
-            $("#q3").val().trim(),
-            $("#q4").val().trim(),
-            $("#q5").val().trim(),
-            $("#q6").val().trim(),
-            $("#q7").val().trim(),
-            $("#q8").val().trim(),
-            $("#q9").val().trim(),
-            $("#q10").val().trim()
+            name: $("#name").val(),
+            image: $("#image").val(),
+            scores: [$("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val(),
             ]
         }
         // Posts the survey info to api/friends
         $.post("/api/friends", newFriend, function(data) {
             console.log("Post sent");
 
-            
+            // Add match's name and image to the modal
+            $("#name-match").text(data.name);
+            $("#image-match").attr("src", data.image);
+
+            // Show the modal with the friend match
+            $("#friend-modal").modal("toggle");           
 
         })
 

@@ -2,8 +2,13 @@
 var friendsData = [ {
     name: "Test guy",
     image: "test link",
-    scores: [3,2,1,5,4,3,2,1,5,4]
-    }
+    scores: ["4", "4","4 (Strong)","4 (Least)", "4", "4", "4", "4", "4", "4"]
+    },
+    {
+        name: "Test guy 2",
+        image: "test link",
+        scores: ["2", "2","2 (Strong)","2 (Least)", "2", "2", "2", "2", "2", "2"]
+        }
 ];
 
 // Exports friendsData for use in other files
