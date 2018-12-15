@@ -8,3 +8,4 @@ var friendsData = [ {
 
 // Exports friendsData for use in other files
 module.exports = friendsData;
+
