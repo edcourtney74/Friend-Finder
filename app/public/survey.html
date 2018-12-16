@@ -226,7 +226,21 @@
             $("#image-match").attr("src", data.image);
 
             // Show the modal with the friend match
-            $("#friend-modal").modal("toggle");
+            $("#friend-modal").modal("toggle");          
         })
+
+        // Clears values previously entered into form
+        $("#name").val("");
+        $("#image").val("");
+        $("#q1").prop("selectedIndex", 0);
+        $("#q2").prop("selectedIndex", 0);
+        $("#q3").prop("selectedIndex", 0);
+        $("#q4").prop("selectedIndex", 0);
+        $("#q5").prop("selectedIndex", 0);
+        $("#q6").prop("selectedIndex", 0);
+        $("#q7").prop("selectedIndex", 0);
+        $("#q8").prop("selectedIndex", 0);
+        $("#q9").prop("selectedIndex", 0);
+        $("#q10").prop("selectedIndex", 0);
     });
 </script>
