@@ -31,13 +31,11 @@ module.exports = function(app) {
             + Math.abs(parseInt(req.body.scores[7]) - parseInt(friendsData[i].scores[7]))  
             + Math.abs(parseInt(req.body.scores[8]) - parseInt(friendsData[i].scores[8]))  
             + Math.abs(parseInt(req.body.scores[9]) - parseInt(friendsData[i].scores[9]))  
-                        
-            console.log("Total Difference: " + totalDifference);
-            
+                                  
             // Push total difference into an array
             totalDifferenceArr.push(totalDifference);
         }
-        console.log(totalDifferenceArr);
+
         // Find lowest totalDifference value in the array 
         // Set an index variable at 0 to start
         var index = 0;
@@ -54,11 +52,7 @@ module.exports = function(app) {
         
         // After calculations, respond to user with the name and image of the closest match 
         res.send({  name: friendsData[index].name,
-                    image: friendsData[index].image });
-        
-        console.log("Closest match: " + friendsData[index].name);
-        
+                    image: friendsData[index].image 
+        });             
     })    
 };
-console.log(parseInt(friendsData[0].scores[2]));
-
