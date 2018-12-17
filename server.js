@@ -9,7 +9,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Have express look in public directory for assets
-app.use(express.static(__dirname + '/public'));
+app.use('/static', express.static(path.join(__dirname, '/app/public')));
 
 // Set up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
